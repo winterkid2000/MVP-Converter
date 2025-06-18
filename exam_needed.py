@@ -25,7 +25,8 @@ class PyramidApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Pyramid (PyRadioMics-Detector)")
-
+        yonsei = tk.PhotoImage(file = r'')
+        self.root.iconphoto(False, yonsei)
         self._build_ui()
 
     def _build_ui(self):
