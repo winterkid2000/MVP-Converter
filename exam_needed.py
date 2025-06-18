@@ -8,12 +8,12 @@ import tempfile
 
 sys.path.append(os.path.abspath("."))
 
-def resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+#def resource_path(relative_path):
+    #try:
+        #base_path = sys._MEIPASS
+    #except Exception:
+        #base_path = os.path.abspath(".")
+    #return os.path.join(base_path, relative_path)
 
 from segmentation.total import run_TS
 from converter.meshconverter_nii import nii_mask_2_stl
@@ -83,8 +83,8 @@ class PyramidApp:
             xlsx_path = os.path.join(temp_dir, f"{organ}_merged_features.xlsx")
             xlsx_output = run_combined_descriptor(nifti_output, ts_output, stl_output, xlsx_path)
 
-            model_path = resource_path(f'best_model_fold_{organ}.pt')
-            scaler_path = resource_path(f'scaler_fold_{organ}.pkl')
+            model_path = r''
+            scaler_path = r''
             predict_with_model(xlsx_output, model_path, scaler_path, log_callback=self.log)
             
         finally: 
