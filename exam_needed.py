@@ -24,7 +24,7 @@ from model.external_patient import predict_with_model
 class PyramidApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Pyramid (Python RadioMics-Detector)")
+        self.root.title("Pyramid(Python RadioMics-Detector)")
         yonsei = tk.PhotoImage(file = r'')
         self.root.iconphoto(False, yonsei)
         self._build_ui()
