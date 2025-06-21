@@ -36,7 +36,7 @@ class PyramidApp:
         tk.Button(self.root, text="찾기", command=self.choose_dicom_dir).grid(row=0, column=2)
 
         tk.Label(self.root, text="장기 이름").grid(row=2, column=0, sticky="w")
-        organ_list = ['pancreas', 'lung', 'kidney', 'liver', 'spleen']
+        organ_list = ['Pancreas', 'Lung', 'Kidney', 'Liver', 'Spleen']
         self.organ_combobox = ttk.Combobox(self.root, values = organ_list, width=60)
         self.organ_combobox.grid(row = 1, column = 1, columnspan =2)
         self.organ_combobox.set('장기 선택')
